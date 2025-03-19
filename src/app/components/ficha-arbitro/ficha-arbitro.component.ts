@@ -17,15 +17,7 @@ export class FichaArbitroComponent implements OnInit {
 
   ngOnInit(): void {
     
-    // 1.- Recoger la id que me llega por la ruta y asignarla a this.id
-
-      // a) Podemos recogerla de forma asíncrona
-
-      // b) Podemos recogerla de forma síncrona X
-
-      const id = this.route.snapshot.paramMap.get('id');
-
-    // 2.- Utilizar el servicio de arbitroService.getById(this.id) para traerme el árbitro
+    const id = this.route.snapshot.paramMap.get('id'); // Esta línea es síncrona!
 
     this.arbitroService.getById(Number(id)).subscribe(
       datos => this.arbitro = datos
