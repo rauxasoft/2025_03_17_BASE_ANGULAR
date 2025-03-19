@@ -1,0 +1,8 @@
+<h2>Ficha de Árbitro</h2>
+<article *ngIf="arbitro">
+    <p>Nombre: {{ arbitro.nombre }}</p>
+    <p>Primer Apellido: {{ arbitro.apellido1 }}</p>
+    <p>Segundo Apellido: {{ arbitro.apellido2 }}</p>
+    <p>Fecha de Nacimiento: {{ arbitro.fechaNacimiento | date:'dd/MM/yyyy' }}</p>
+    <p>Colegio: {{ arbitro.colegio }}</p>
+</article>

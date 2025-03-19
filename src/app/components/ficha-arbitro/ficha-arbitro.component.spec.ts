@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BorrameComponent } from './borrame.component';
+import { FichaArbitroComponent } from './ficha-arbitro.component';
 
-describe('BorrameComponent', () => {
-  let component: BorrameComponent;
-  let fixture: ComponentFixture<BorrameComponent>;
+describe('FichaArbitroComponent', () => {
+  let component: FichaArbitroComponent;
+  let fixture: ComponentFixture<FichaArbitroComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BorrameComponent ]
+      declarations: [ FichaArbitroComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BorrameComponent);
+    fixture = TestBed.createComponent(FichaArbitroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
