@@ -10,6 +10,7 @@ import { ArbitroService } from 'src/app/services/arbitro.service';
 export class ListadoArbitrosComponent implements OnInit {
 
   arbitros:Arbitro[] = undefined;
+  displayedColumns:string[] = ["ID","Nombre"];
 
   constructor(private arbitroService: ArbitroService) { }
 

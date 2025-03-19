@@ -1,22 +1,25 @@
 <h2>Listado de Árbitros</h2>
 
 <div *ngIf="!arbitros">
-    Cargando....
+    <mat-spinner></mat-spinner>
 </div>
 
 <div *ngIf="arbitros">
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre Completo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let arbitro of arbitros">
-                <td><a [routerLink] = "['/ficha-arbitro', arbitro.id]">{{ arbitro.id }}</a></td>
-                <td>{{ arbitro.apellido1 + " " + arbitro.apellido2  + ", " + arbitro.nombre }} </td>
-            </tr>
-        </tbody>
+    <table mat-table [dataSource]="arbitros" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="ID">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let arbitro"><a [routerLink] = "['/ficha-arbitro', arbitro.id]">{{ arbitro.id }}</a></td>
+        </ng-container>
+
+        <ng-container matColumnDef="Nombre">
+            <th mat-header-cell *matHeaderCellDef>Nombre Completo</th>
+            <td mat-cell *matCellDef="let arbitro">{{arbitro.nombre}} {{arbitro.apellido1}} {{arbitro.apellido2}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
     </table>
+
 </div>

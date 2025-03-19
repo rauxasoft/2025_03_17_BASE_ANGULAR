@@ -3,22 +3,23 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Arbitro } from '../model/arbitro';
 import { environment } from 'src/environments/environment';
+import { Equipo } from '../model/equipo';
 
 const baseURL = environment.baseURL;
 
 @Injectable({
   providedIn: 'root'
 })
-export class ArbitroService {
+export class EquipoService {
 
   constructor(private http: HttpClient ) { }
 
-  getAll(): Observable<Arbitro[]>{
-    return this.http.get<Arbitro[]>(`${baseURL}/arbitros`);
+  getAll(): Observable<Equipo[]>{
+    return this.http.get<Equipo[]>(`${baseURL}/equipos`);
   }
 
-  getById(id: number): Observable<Arbitro>{
-    return this.http.get<Arbitro>(`${baseURL}/arbitros/${id}`);
+  getById(id: number): Observable<Equipo>{
+    return this.http.get<Equipo>(`${baseURL}/equipos/${id}`);
   }
 
 }
