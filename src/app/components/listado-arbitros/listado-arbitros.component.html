@@ -1,0 +1,26 @@
+<h2>Listado de Árbitros</h2>
+
+<div *ngIf="!arbitros">
+    Cargando....
+</div>
+
+<div *ngIf="arbitros">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre Completo</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Colegio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let arbitro of arbitros">
+                <td>{{ arbitro.id }}</td>
+                <td>{{ arbitro.apellido1 + " " + arbitro.apellido2  + ", " + arbitro.nombre }} </td>
+                <td>{{ arbitro.fechaNacimiento | date:'dd/MM/yyyy' }}</td>
+                <td>{{ arbitro.colegio }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
