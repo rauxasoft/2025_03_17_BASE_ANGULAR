@@ -1,0 +1,51 @@
+<h2>Listado de Partidos</h2>
+
+<div *ngIf="partidos">
+    <table mat-table [dataSource]="partidos" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="1">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let partido">{{partido.id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="2">
+            <th mat-header-cell *matHeaderCellDef>Jornada</th>
+            <td mat-cell *matCellDef="let partido">{{partido.numeroJornada}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="3">
+            <th mat-header-cell *matHeaderCellDef>Arbitro</th>
+            <td mat-cell *matCellDef="let partido"> {{partido.arbitro.apellido1 }} {{partido.arbitro.apellido2 }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="4">
+            <th mat-header-cell *matHeaderCellDef>Equipo Local</th>
+            <td mat-cell *matCellDef="let partido">{{partido.local.nombre}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="5">
+            <th mat-header-cell *matHeaderCellDef>Equipo Visitante</th>
+            <td mat-cell *matCellDef="let partido">{{partido.visitante.nombre}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="6">
+            <th mat-header-cell *matHeaderCellDef>Estado</th>
+            <td mat-cell *matCellDef="let partido">{{partido.estado}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="7">
+            <th mat-header-cell *matHeaderCellDef>Goles Local</th>
+            <td mat-cell *matCellDef="let partido">{{partido.golesLocal}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="8">
+            <th mat-header-cell *matHeaderCellDef>Goles Visitante</th>
+            <td mat-cell *matCellDef="let partido">{{partido.golesVisitante}}</td>
+        </ng-container>
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+</div>
