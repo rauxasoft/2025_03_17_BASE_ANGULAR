@@ -1,7 +1,7 @@
 <h2>Clasificación</h2>
-
+<!--
 {{ filas | json}}
-
+-->
 <table *ngIf="filas" class="table_component">
     <thead>
         <tr>
@@ -24,20 +24,20 @@
             <th>V GC</th>
             <th>V Puntos</th>
 
-            <th>T PJ</th>
-            <th>T PG</th>
-            <th>T PE</th>
-            <th>T PP</th>
-            <th>T GF</th>
-            <th>T GC</th>
-            <th>T Puntos</th>
+            <th>PJ</th>
+            <th>PG</th>
+            <th>PE</th>
+            <th>PP</th>
+            <th>GF</th>
+            <th>GC</th>
+            <th>Puntos</th>
     
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let fila of filas">
 
-           <td>{{ fila.equipo.nombre }}</td>
+           <td>{{ fila.nombreEquipo }}</td>
 
            <td>{{ fila.localPartidosJugados }}</td>
            <td>{{ fila.localPartidosGanados }}</td>

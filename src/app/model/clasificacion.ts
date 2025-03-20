@@ -1,6 +1,7 @@
-import { Equipo } from "./equipo";
 
 export interface Estadisticas {
+    idEquipo:number;
+    nombreEquipo: string;
     localPartidosJugados: number;
     localPartidosGanados: number;
     localPartidosEmpatados: number;
@@ -25,10 +26,10 @@ export interface Estadisticas {
 }
   
 export interface EstadisticasEquipo {
-    clasificacion: number;
-    equipo: Equipo;
+    //clasificacion: number;
+    equipo: string;
     estadisticas: Estadisticas;
 }
   
 // Definimos el tipo que contiene todos los equipos, usando un índice numérico.
-export type Clasificacion = Record<number, EstadisticasEquipo>;
+export type Clasificacion = Record<string, EstadisticasEquipo>;
