@@ -5,7 +5,7 @@
 
         <ng-container matColumnDef="1">
             <th mat-header-cell *matHeaderCellDef>ID</th>
-            <td mat-cell *matCellDef="let partido">{{partido.id}}</td>
+            <td mat-cell *matCellDef="let partido"><a [routerLink] = "['/ficha-partido', partido.id]">{{ partido.id }}</a></td>
         </ng-container>
 
         <ng-container matColumnDef="2">
@@ -15,7 +15,7 @@
 
         <ng-container matColumnDef="3">
             <th mat-header-cell *matHeaderCellDef>Arbitro</th>
-            <td mat-cell *matCellDef="let partido"> {{partido.arbitro.apellido1 }} {{partido.arbitro.apellido2 }}</td>
+            <td mat-cell *matCellDef="let partido">{{partido.arbitro.apellido1 }} {{partido.arbitro.apellido1 }} {{partido.arbitro.apellido2 }}</td>
         </ng-container>
 
         <ng-container matColumnDef="4">
@@ -30,7 +30,7 @@
 
         <ng-container matColumnDef="6">
             <th mat-header-cell *matHeaderCellDef>Estado</th>
-            <td mat-cell *matCellDef="let partido">{{partido.estado}}</td>
+            <td [ngClass]="{'negrita': partido.estado === 'FINALIZADO'}" mat-cell *matCellDef="let partido">{{partido.estado}}</td>
         </ng-container>
 
         <ng-container matColumnDef="7">

@@ -20,9 +20,10 @@ import { SinoPipe } from './pipes/sino.pipe';
 import { ClasificacionComponent } from './components/clasificacion/clasificacion.component';
 import { HijoComponent } from './components/hijo/hijo.component';
 import { ListadoPartidosComponent } from './components/listado-partidos/listado-partidos.component';
+import { FichaPartidoComponent } from './components/ficha-partido/ficha-partido.component';
 
 @NgModule({
-  declarations: [AppComponent, ListadoArbitrosComponent, HomeComponent, FichaArbitroComponent, FichaEquipoComponent, ListadoEquiposComponent, SinoPipe, ClasificacionComponent, HijoComponent, ListadoPartidosComponent],
+  declarations: [AppComponent, ListadoArbitrosComponent, HomeComponent, FichaArbitroComponent, FichaEquipoComponent, ListadoEquiposComponent, SinoPipe, ClasificacionComponent, HijoComponent, ListadoPartidosComponent, FichaPartidoComponent],
   imports: [
             BrowserModule, 
             AppRoutingModule, 

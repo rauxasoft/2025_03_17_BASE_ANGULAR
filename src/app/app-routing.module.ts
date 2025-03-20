@@ -7,17 +7,17 @@ import { FichaEquipoComponent } from './components/ficha-equipo/ficha-equipo.com
 import { ListadoEquiposComponent } from './components/listado-equipos/listado-equipos.component';
 import { ClasificacionComponent } from './components/clasificacion/clasificacion.component';
 import { ListadoPartidosComponent } from './components/listado-partidos/listado-partidos.component';
+import { FichaPartidoComponent } from './components/ficha-partido/ficha-partido.component';
 
 const routes: Routes = [
   { path: 'listado-arbitros', component: ListadoArbitrosComponent },
-  { path: 'ficha-arbitro/:id', component: FichaEquipoComponent },
+  { path: 'ficha-arbitro/:id', component: FichaArbitroComponent },
 
   { path: 'listado-equipos', component: ListadoEquiposComponent },
-  { path: 'ficha-equipo/:id', component: FichaArbitroComponent },
+  { path: 'ficha-equipo/:id', component: FichaEquipoComponent },
 
   { path: 'listado-partidos', component: ListadoPartidosComponent },
-  
-  /// { path: 'ficha-partido/:id', component: FichaArbitroComponent },
+  { path: 'ficha-partido/:id', component: FichaPartidoComponent },
 
   { path: 'clasificacion', component: ClasificacionComponent },
   { path: 'home', component: HomeComponent },
