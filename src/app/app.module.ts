@@ -15,9 +15,10 @@ import { FichaEquipoComponent } from './components/ficha-equipo/ficha-equipo.com
 import { ListadoEquiposComponent } from './components/listado-equipos/listado-equipos.component';
 
 import { SinoPipe } from './pipes/sino.pipe';
+import { ClasificacionComponent } from './components/clasificacion/clasificacion.component';
 
 @NgModule({
-  declarations: [AppComponent, ListadoArbitrosComponent, HomeComponent, FichaArbitroComponent, FichaEquipoComponent, ListadoEquiposComponent, SinoPipe],
+  declarations: [AppComponent, ListadoArbitrosComponent, HomeComponent, FichaArbitroComponent, FichaEquipoComponent, ListadoEquiposComponent, SinoPipe, ClasificacionComponent],
   imports: [
             BrowserModule, 
             AppRoutingModule, 

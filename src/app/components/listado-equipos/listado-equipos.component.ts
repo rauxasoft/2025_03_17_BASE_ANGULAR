@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Equipo } from 'src/app/model/equipo';
-import { EquipoService } from 'src/app/services/equipo-service'
-
+import { EquipoService } from 'src/app/services/equipo.service'
 
 @Component({
   selector: 'app-listado-equipos',
