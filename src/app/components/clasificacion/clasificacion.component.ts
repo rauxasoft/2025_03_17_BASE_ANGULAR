@@ -9,7 +9,6 @@ import { ClasificacionService } from 'src/app/services/clasificacion.service';
 })
 export class ClasificacionComponent implements OnInit {
 
-  clasificaciones: Clasificacion[] = undefined;
   filas = undefined;
 
   constructor(private clasificacionService: ClasificacionService) { }
@@ -17,8 +16,23 @@ export class ClasificacionComponent implements OnInit {
   ngOnInit() {
     this.clasificacionService.getAll().subscribe(
       data => {
-        this.clasificaciones = data;
-        this.filas = Object.values(data);
+
+        this.filas = Object.values(data); 
+  
+        /*
+        
+        // el método values() extrae los valores de un objeto y prescinde de los atributos
+
+        let productos = {
+          "102": {"nombre": "Impresora HP"},
+          "103": {"numero": 233},
+         
+          "104": {}
+        }
+
+        let valoresProductos: any[] = Object.values(productos);
+
+        */
       }
     );
   }

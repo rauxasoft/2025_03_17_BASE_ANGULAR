@@ -26,7 +26,6 @@ export interface Estadisticas {
 }
   
 export interface EstadisticasEquipo {
-    //clasificacion: number;
     equipo: string;
     estadisticas: Estadisticas;
 }
