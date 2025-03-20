@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Partido } from 'src/app/model/partido';
+import { Lance, Partido } from 'src/app/model/partido';
 import { PartidoService } from 'src/app/services/partido.service';
 
 @Component({
@@ -11,6 +11,7 @@ import { PartidoService } from 'src/app/services/partido.service';
 export class FichaPartidoComponent implements OnInit {
 
   partido: Partido = undefined;
+  lances: Lance[] = undefined;
   displayedColumns = ["minuto", "tipoLance", "comentario", "icono"]
   
   constructor(private route: ActivatedRoute, 
@@ -21,7 +22,12 @@ export class FichaPartidoComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id'); // Esta línea es síncrona!
   
     this.partidoService.getById(Number(id)).subscribe(
-      datos => this.partido = datos
+      datos => {
+        this.partido = datos
+        this.lances = this.partido.lances;
+        this.lances.reverse();
+      }
+       
     );
   
   }
