@@ -1,28 +1,35 @@
 
 export interface Estadisticas {
-    idEquipo:number;
-    nombreEquipo: string;
-    localPartidosJugados: number;
-    localPartidosGanados: number;
-    localPartidosEmpatados: number;
-    localPartidosPerdidos: number;
-    localGolesFavor: number;
-    localGolesContra: number;
-    visitantePartidosJugados: number;
-    visitantePartidosGanados: number;
-    visitantePartidosEmpatados: number;
-    visitantePartidosPerdidos: number;
-    visitanteGolesFavor: number;
-    visitanteGolesContra: number;
-    totalPartidosGanados: number;
-    totalPartidosEmpatados: number;
-    totalPartidosJugados: number;
-    totalPartidosPerdidos: number;
-    totalGolesContra: number;
-    localPuntos: number;
-    visitantePuntos: number;
-    totalPuntos: number;
-    totalGolesFavor: number;
+    idEquipo:number;                    //  1
+    nombreEquipo: string;               //  2
+
+    localPartidosJugados: number;       //  3 
+    localPartidosGanados: number;       //  4
+    localPartidosEmpatados: number;     //  5
+    localPartidosPerdidos: number;      //  6
+    localGolesFavor: number;            //  7
+    localGolesContra: number;           //  8
+
+    visitantePartidosJugados: number;   //  9
+    visitantePartidosGanados: number;   // 10
+    visitantePartidosEmpatados: number; // 11
+    visitantePartidosPerdidos: number;  // 12
+    visitanteGolesFavor: number;        // 13
+    visitanteGolesContra: number;       // 14
+
+    totalPartidosGanados: number;       // 15
+    totalPartidosEmpatados: number;     // 16
+    totalPartidosJugados: number;       // 17
+    totalPartidosPerdidos: number;      // 18
+    totalGolesContra: number;           // 19
+    totalGolesFavor: number;            // 23
+
+    localPuntos: number;                // 20
+    visitantePuntos: number;            // 21
+
+    totalPuntos: number;                // 22
+
+    
 }
   
 export interface EstadisticasEquipo {
