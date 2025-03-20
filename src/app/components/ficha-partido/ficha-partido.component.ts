@@ -10,18 +10,19 @@ import { PartidoService } from 'src/app/services/partido.service';
 })
 export class FichaPartidoComponent implements OnInit {
 
-   partido: Partido = undefined;
+  partido: Partido = undefined;
+  displayedColumns = ["minuto", "tipoLance", "comentario", "icono"]
   
-    constructor(private route: ActivatedRoute, 
-                private partidoService: PartidoService) { }
+  constructor(private route: ActivatedRoute, 
+              private partidoService: PartidoService) { }
   
-    ngOnInit(): void {
+  ngOnInit(): void {
       
-      const id = this.route.snapshot.paramMap.get('id'); // Esta línea es síncrona!
+    const id = this.route.snapshot.paramMap.get('id'); // Esta línea es síncrona!
   
-      this.partidoService.getById(Number(id)).subscribe(
-        datos => this.partido = datos
-      );
+    this.partidoService.getById(Number(id)).subscribe(
+      datos => this.partido = datos
+    );
   
-    }
+  }
 }

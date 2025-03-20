@@ -18,12 +18,24 @@ import { ListadoEquiposComponent } from './components/listado-equipos/listado-eq
 
 import { SinoPipe } from './pipes/sino.pipe';
 import { ClasificacionComponent } from './components/clasificacion/clasificacion.component';
-import { HijoComponent } from './components/hijo/hijo.component';
 import { ListadoPartidosComponent } from './components/listado-partidos/listado-partidos.component';
 import { FichaPartidoComponent } from './components/ficha-partido/ficha-partido.component';
+import { LanceIconComponent } from './components/lance-icon/lance-icon.component';
 
 @NgModule({
-  declarations: [AppComponent, ListadoArbitrosComponent, HomeComponent, FichaArbitroComponent, FichaEquipoComponent, ListadoEquiposComponent, SinoPipe, ClasificacionComponent, HijoComponent, ListadoPartidosComponent, FichaPartidoComponent],
+  declarations: [
+    AppComponent, 
+    ListadoArbitrosComponent, 
+    HomeComponent, 
+    FichaArbitroComponent, 
+    FichaEquipoComponent, 
+    ListadoEquiposComponent, 
+    SinoPipe, 
+    ClasificacionComponent, 
+    ListadoPartidosComponent, 
+    FichaPartidoComponent, 
+    LanceIconComponent
+  ],
   imports: [
             BrowserModule, 
             AppRoutingModule, 

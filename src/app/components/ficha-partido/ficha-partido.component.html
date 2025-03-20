@@ -1,3 +1,40 @@
 <h2>Partido al minuto</h2>
-{{ partido | json }}
+
+<p>ID: {{ partido.id }}</p>
+<p>Jornada: {{ partido.numeroJornada }}</p>
+<h1>{{ partido.local.nombre }} {{ partido.golesLocal }} - {{ partido.visitante.nombre }} {{ partido.golesVisitante }}</h1>
+<p>Estado: {{ partido.estado }}</p>
+<h3>Partido en directo</h3>
+
+<div *ngIf="partido.lances">
+    <table mat-table [dataSource]="partido.lances" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="minuto">
+            <th mat-header-cell *matHeaderCellDef>minuto</th>
+            <td mat-cell *matCellDef="let lance">{{ lance.minuto }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="tipoLance">
+            <th mat-header-cell *matHeaderCellDef>tipo de lance</th>
+            <td mat-cell *matCellDef="let lance">{{ lance.tipoLance.nombre }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="comentario">
+            <th mat-header-cell *matHeaderCellDef>comentario</th>
+            <td mat-cell *matCellDef="let lance">{{ lance.comentario }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="icono">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let lance"><lance-icon [tipoLance]="lance.tipoLance.nombre"></lance-icon></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+</div>
+
+
 
